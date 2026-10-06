@@ -156,7 +156,12 @@
     letter-spacing: 0;
     overflow-x: hidden;
   }
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  section[id] { scroll-margin-top: 5rem; }
+  img { color: transparent; }
   ::selection { background: var(--gold); color: var(--navy); }
   a, button, input, select { -webkit-tap-highlight-color: transparent; }
 }
