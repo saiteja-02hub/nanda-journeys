@@ -88,17 +88,17 @@ function Index() {
   const why = [[ShieldCheck,"Experienced Drivers"],[Sparkles,"Clean & Comfortable Vehicles"],[BriefcaseBusiness,"Professional Service"],[Check,"Reasonable Pricing"],[Clock3,"24/7 Availability"],[MapPin,"Reliable Pickup & Drop"],[RouteIcon,"Flexible Travel Options"],[Headphones,"Customer-Focused Service"]] as const;
   return <main className="pb-20 md:pb-0">
     <Header />
-    <section id="home" className="relative min-h-[760px] overflow-hidden bg-navy pt-20 lg:min-h-[820px]">
+    <section id="home" className="relative min-h-[700px] overflow-hidden bg-navy pt-20 lg:min-h-[820px]">
       <img src={heroImage} alt="Premium chauffeur vehicle at an illuminated Hyderabad palace" width={1920} height={1080} fetchPriority="high" className="absolute inset-0 size-full object-cover object-[68%_center] motion-safe:animate-[drift_14s_ease-in-out_infinite_alternate]" />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,var(--navy)_0%,color-mix(in_oklab,var(--navy)_88%,transparent)_42%,color-mix(in_oklab,var(--navy)_24%,transparent)_100%)]" />
-      <div className="section-shell relative flex min-h-[680px] items-center py-20 lg:min-h-[740px]">
+      <div className="section-shell relative flex min-h-[620px] items-center py-12 sm:py-16 lg:min-h-[740px] lg:py-20">
         <div className="max-w-3xl reveal">
           <p className="eyebrow">Premium travel & chauffeur services</p>
-          <h1 className="mt-6 font-display text-6xl font-semibold leading-[0.86] text-ivory sm:text-7xl lg:text-[6.8rem]">YOUR JOURNEY.<br/><span className="text-gold">OUR COMMITMENT.</span></h1>
-          <p className="mt-7 max-w-2xl font-display text-xl text-ivory/90 sm:text-2xl">Premium Travel & Chauffeur Services Across Hyderabad and Beyond.</p>
-          <p className="mt-4 max-w-xl text-sm leading-7 text-ivory/65">Reliable vehicles, experienced drivers and professional service for local travel, airport transfers, family journeys, corporate travel and outstation trips.</p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row"><ActionLink href="#booking">Book your journey <ArrowRight className="size-4" /></ActionLink><ActionLink href={whatsAppGeneral} light><MessageCircle className="size-4" /> WhatsApp us</ActionLink></div>
-          <div className="mt-8 flex items-center gap-4 text-ivory"><span className="text-gold">★★★★★</span><span className="h-8 w-px bg-ivory/20"/><span className="text-xs leading-5"><strong className="block">4.9 Rated on Google</strong><span className="text-ivory/55">123+ Customer Reviews</span></span></div>
+          <h1 className="mt-5 font-display text-[3.2rem] font-semibold leading-[0.88] text-ivory sm:mt-6 sm:text-7xl lg:text-[6.8rem]">YOUR JOURNEY.<br/><span className="text-gold">OUR COMMITMENT.</span></h1>
+          <p className="mt-6 max-w-2xl font-display text-lg text-ivory/90 sm:mt-7 sm:text-2xl">Premium Travel & Chauffeur Services Across Hyderabad and Beyond.</p>
+          <p className="mt-3 max-w-xl text-xs leading-6 text-ivory/65 sm:mt-4 sm:text-sm sm:leading-7">Reliable vehicles, experienced drivers and professional service for local travel, airport transfers, family journeys, corporate travel and outstation trips.</p>
+          <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row"><ActionLink href="#booking">Book your journey <ArrowRight className="size-4" /></ActionLink><ActionLink href={whatsAppGeneral} light><MessageCircle className="size-4" /> WhatsApp us</ActionLink></div>
+          <div className="mt-6 flex items-center gap-4 text-ivory sm:mt-8"><span className="text-gold">★★★★★</span><span className="h-8 w-px bg-ivory/20"/><span className="text-xs leading-5"><strong className="block">4.9 Rated on Google</strong><span className="text-ivory/55">123+ Customer Reviews</span></span></div>
         </div>
       </div>
     </section>
