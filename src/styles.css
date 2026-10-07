@@ -217,13 +217,13 @@
   .site-main section:not(#home):not(#booking):not(#hyderabad) { padding-block: 96px; }
 }
 @media (max-width: 639px) {
-  .hero-inner { min-height: 0; padding-block: 28px 40px; }
+  .hero-inner { min-height: 0; padding-block: 22px 26px; }
   .hero-title { font-size: 28px; }
   .hero-copy > p:first-child { font-size: 9px; letter-spacing: 0; }
-  .hero-copy > p { line-height: 20px; }
+  .hero-copy > p { line-height: 18px; }
   .hero-copy > h1 { margin-top: 14px; }
-  .hero-copy > div { margin-top: 18px; }
-  .hero-copy > div:last-child { margin-top: 16px; }
+  .hero-copy > div { margin-top: 14px; }
+  .hero-copy > div:last-child { margin-top: 12px; }
   .hero-copy a { min-height: 44px; padding-block: 10px; }
   .hero-copy { width: 100%; }
   .hero-shade { background: linear-gradient(0deg, var(--navy), color-mix(in oklab, var(--navy) 78%, transparent) 58%, color-mix(in oklab, var(--navy) 50%, transparent)); }
