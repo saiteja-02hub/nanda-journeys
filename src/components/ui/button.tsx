@@ -9,6 +9,8 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
+        travel: "rounded-none bg-gold text-navy hover:bg-gold-soft",
+        travelOutline: "rounded-none border border-ivory/35 bg-transparent text-ivory hover:border-gold hover:text-gold",
         default: "bg-primary text-primary-foreground shadow hover:bg-primary/90",
         destructive: "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:
