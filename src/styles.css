@@ -1,6 +1,6 @@
 @import "tailwindcss" source(none);
-@source "../src";
 @import "tw-animate-css";
+@source "../src";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -19,8 +19,8 @@
  */
 
 @theme inline {
-  --font-display: "Cormorant Garamond", Georgia, serif;
-  --font-sans: "Manrope", ui-sans-serif, sans-serif;
+  --font-display: "Libre Baskerville", Georgia, serif;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, sans-serif;
   --color-navy: var(--navy);
   --color-navy-soft: var(--navy-soft);
   --color-ivory: var(--ivory);
@@ -70,25 +70,25 @@
 
 :root {
   --radius: 0.25rem;
-  --navy: oklch(0.17 0.025 248);
+  --navy: oklch(0.21877 0.02655 248.05);
   --navy-soft: oklch(0.235 0.026 248);
-  --ivory: oklch(0.975 0.009 83);
-  --gold: oklch(0.71 0.095 78);
+  --ivory: oklch(0.979 0.007 88);
+  --gold: oklch(0.72 0.0805 83);
   --gold-soft: oklch(0.9 0.047 82);
-  --background: oklch(0.975 0.009 83);
-  --foreground: oklch(0.2 0.018 250);
+  --background: var(--ivory);
+  --foreground: var(--navy);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.17 0.025 248);
-  --primary-foreground: oklch(0.975 0.009 83);
+  --primary: var(--navy);
+  --primary-foreground: var(--ivory);
   --secondary: oklch(0.968 0.007 247.896);
   --secondary-foreground: oklch(0.208 0.042 265.755);
   --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.71 0.095 78);
-  --accent-foreground: oklch(0.17 0.025 248);
+  --muted-foreground: oklch(0.46 0.018 248);
+  --accent: var(--gold);
+  --accent-foreground: var(--navy);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(0.84 0.018 80);
@@ -107,6 +107,9 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+  --shadow-booking: 0 16px 40px -16px color-mix(in oklab, var(--navy) 20%, transparent);
+  --hero-overlay: linear-gradient(90deg, var(--navy), color-mix(in oklab, var(--navy) 85%, transparent) 38%, color-mix(in oklab, var(--navy) 10%, transparent));
+  --local-overlay: linear-gradient(90deg, color-mix(in oklab, var(--navy) 95%, transparent), color-mix(in oklab, var(--navy) 68%, transparent) 55%, color-mix(in oklab, var(--navy) 15%, transparent));
 }
 
 .dark {
@@ -157,7 +160,7 @@
     overflow-x: hidden;
   }
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
     scroll-padding-top: 5rem;
   }
   section[id] { scroll-margin-top: 5rem; }
@@ -167,7 +170,7 @@
 }
 
 @utility section-shell {
-  width: min(100% - 2rem, 80rem);
+  width: min(100% - 3rem, 80rem);
   margin-inline: auto;
 }
 
@@ -185,6 +188,56 @@
 
 @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
 @keyframes drift { from { transform: scale(1.02); } to { transform: scale(1.07); } }
+
+.hero-shade { background: var(--hero-overlay); }
+.local-shade { background: var(--local-overlay); }
+.hero-inner { min-height: 640px; }
+.hero-title { font-size: 48px; line-height: 1.2; overflow-wrap: anywhere; }
+.booking-panel { box-shadow: var(--shadow-booking); }
+#contact .grid > div { min-width: 0; }
+#contact a { max-width: 100%; }
+.journey-input { letter-spacing: 0; color-scheme: light; border-radius: 0; }
+.trust-grid > div:nth-child(even) { border-left: 1px solid var(--border); }
+.mobile-menu { max-height: calc(100dvh - 160px); overflow-y: auto; overscroll-behavior: contain; }
+.quick-actions { padding-bottom: env(safe-area-inset-bottom); }
+.site-main { padding-bottom: calc(80px + env(safe-area-inset-bottom)); }
+.site-main a:focus-visible, .site-main button:focus-visible, .journey-input:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+.site-main section:focus { outline: none; }
+.site-main .font-display { font-weight: 400; }
+.site-main section:not(#home):not(#booking):not(#hyderabad) { padding-block: 72px; }
+.site-main footer .font-display, .site-header .font-display { font-family: var(--font-sans); font-size: 14px; font-weight: 600; }
+.site-main .tracking-\[0\.12em\], .site-main .tracking-\[0\.1em\], .site-main .tracking-\[0\.15em\], .site-main .tracking-\[0\.24em\] { letter-spacing: 0; }
+@media (min-width: 768px) {
+  .site-main { padding-bottom: 0; }
+  .trust-grid > div + div { border-left: 1px solid var(--border); }
+}
+@media (min-width: 1024px) {
+  .hero-title { font-size: 60px; }
+  .hero-inner { min-height: min(700px, calc(100svh - 155px)); }
+  .site-main section:not(#home):not(#booking):not(#hyderabad) { padding-block: 96px; }
+}
+@media (max-width: 639px) {
+  .hero-inner { min-height: 0; padding-block: 22px 26px; }
+  .hero-title { font-size: 28px; }
+  .hero-copy > p:first-child { font-size: 9px; letter-spacing: 0; }
+  .hero-copy > p { line-height: 18px; }
+  .hero-copy > h1 { margin-top: 14px; }
+  .hero-copy > div { margin-top: 14px; }
+  .hero-copy > div:last-child { margin-top: 12px; }
+  .hero-copy a { min-height: 44px; padding-block: 10px; }
+  .hero-copy { width: 100%; }
+  .hero-shade { background: linear-gradient(0deg, var(--navy), color-mix(in oklab, var(--navy) 78%, transparent) 58%, color-mix(in oklab, var(--navy) 50%, transparent)); }
+  .home-hero img { object-position: 65% center; }
+  .site-header .font-display { font-size: 12px; }
+  .site-header svg { flex-shrink: 0; }
+  .site-header .section-shell { width: calc(100% - 2rem); }
+  .site-main section:not(#home):not(#booking):not(#hyderabad) { padding-block: 56px; }
+  .services-grid { gap: 24px; }
+  .services-grid article p { min-height: 0; }
+  #hyderabad, #hyderabad > .section-shell { min-height: 580px; }
+  .local-shade { background: color-mix(in oklab, var(--navy) 80%, transparent); }
+  .owner-portrait { max-width: 320px; }
+}
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
