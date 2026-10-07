@@ -119,8 +119,14 @@ function Index() {
     if (window.location.hash) window.history.replaceState(window.history.state, "", window.location.pathname + window.location.search);
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
     const resetEntry = (event: PageTransitionEvent) => { if (event.persisted) window.scrollTo({ top: 0, left: 0, behavior: "instant" }); };
+    const resetHash = () => {
+      if (!window.location.hash) return;
+      window.history.replaceState(window.history.state, "", window.location.pathname + window.location.search);
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    };
     window.addEventListener("pageshow", resetEntry);
-    return () => window.removeEventListener("pageshow", resetEntry);
+    window.addEventListener("hashchange", resetHash);
+    return () => { window.removeEventListener("pageshow", resetEntry); window.removeEventListener("hashchange", resetHash); };
   }, []);
   function navigateSection(event: MouseEvent<HTMLElement>) {
     const link = (event.target as HTMLElement).closest<HTMLAnchorElement>('a[href^="#"]');
