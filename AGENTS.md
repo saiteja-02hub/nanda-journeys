@@ -13,3 +13,4 @@
 - Keep repeated website content such as services, fleet categories, destinations, and reviews data-driven so it can be edited without changing section markup.
 - Keep this explicitly single-scrolling website at `/`; section navigation scrolls without persisting hashes, and document entry resets scroll so restored About positions cannot become the landing view.
 - Use shared travel Button variants and semantic global tokens for website actions and visual styling so presentation stays consistent.
+- Keep the timed quote dialog in a standalone component using the shared fleet/contact configuration and WhatsApp handoff; session-scoped display prevents repeated interruptions without storing customer details.

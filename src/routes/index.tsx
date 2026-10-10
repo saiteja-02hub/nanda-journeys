@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BrandMark } from "@/components/BrandMark";
+import { QuotePopup } from "@/components/QuotePopup";
 import { business, destinations, fleet, navItems, reviews, services, whatsappUrl } from "@/config/business";
 import heroImage from "@/assets/nanda-hero.jpg";
 import fleetImage from "@/assets/nanda-fleet.jpg";
@@ -139,6 +140,7 @@ function Index() {
     target.focus({ preventScroll: true });
   }
   return <main className="site-main pb-20 md:pb-0" onClick={navigateSection}>
+    <QuotePopup />
     <Header />
     <section id="home" className="home-hero relative overflow-hidden bg-navy pt-18 lg:pt-20">
       <img src={heroImage} alt="Premium chauffeur vehicle at an illuminated Hyderabad palace" width={1920} height={1088} fetchPriority="high" decoding="async" className="absolute inset-0 size-full object-cover object-[68%_center] motion-safe:lg:animate-[drift_14s_ease-in-out_infinite_alternate]" />
