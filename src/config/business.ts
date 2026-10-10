@@ -4,6 +4,8 @@ export const business = {
   category: "Premium Travel & Chauffeur Services",
   phoneDisplay: "+91 63047 26918",
   phoneHref: "tel:6304726918",
+  phone2Display: "+91 81211 64499",
+  phone2Href: "tel:8121164499",
   whatsappNumber: "916304726918",
   address: "29-159/3, New Vidya Nagar, Bank Colony, Malkajgiri, Secunderabad, Telangana 500056",
   addressLines: [
