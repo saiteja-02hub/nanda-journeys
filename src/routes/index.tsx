@@ -14,6 +14,11 @@ import fleetImage from "@/assets/nanda-fleet.jpg";
 import outstationImage from "@/assets/nanda-outstation.jpg";
 import cityImage from "@/assets/nanda-hyderabad.jpg";
 import ownerImage from "@/assets/nanda-owner.jpg.asset.json";
+import airportImage from "@/assets/nanda-service-airport.jpg.asset.json";
+import familyImage from "@/assets/nanda-service-family.jpg.asset.json";
+import excursionImage from "@/assets/nanda-service-excursion.jpg.asset.json";
+import onewayImage from "@/assets/nanda-service-oneway.jpg.asset.json";
+import roundImage from "@/assets/nanda-service-round.jpg.asset.json";
 
 const seoTitle = "Nanda Tours & Travels | Premium Cab & Travel Services in Hyderabad";
 const seoDescription = "Nanda Tours & Travels offers reliable cab, airport transfer, Hyderabad local, corporate, family and outstation travel services from Hyderabad, Telangana.";
@@ -39,7 +44,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const imageMap = { city: cityImage, hero: heroImage, road: outstationImage, fleet: fleetImage };
+const imageMap = { city: cityImage, hero: heroImage, road: outstationImage, fleet: fleetImage, airport: airportImage.url, family: familyImage.url, excursion: excursionImage.url, oneway: onewayImage.url, round: roundImage.url };
 const whatsAppGeneral = whatsappUrl("Hello Nanda Tours & Travels, I would like to enquire about a journey.");
 
 function ActionLink({ href, children, light = false, className = "" }: { href: string; children: React.ReactNode; light?: boolean; className?: string }) {
