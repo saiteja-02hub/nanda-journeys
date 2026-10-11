@@ -34,13 +34,13 @@ export const navItems = [
 
 export const services = [
   { title: "Hyderabad City Travel", text: "Comfortable local transportation for business, shopping, family and personal travel.", image: "city" },
-  { title: "Airport Transfers", text: "Reliable pickup and drop services designed around your flight schedule.", image: "hero" },
+  { title: "Airport Transfers", text: "Reliable pickup and drop services designed around your flight schedule.", image: "airport" },
   { title: "Outstation Travel", text: "Comfortable long-distance journeys across Telangana and Andhra Pradesh.", image: "road" },
   { title: "Corporate Travel", text: "Professional transportation solutions for executives, employees and corporate requirements.", image: "fleet" },
-  { title: "Family Trips", text: "Comfortable and spacious travel designed for family journeys.", image: "road" },
-  { title: "Day Trips & Excursions", text: "Explore destinations comfortably with flexible travel arrangements.", image: "city" },
-  { title: "One-Way Trips", text: "Convenient point-to-point travel without unnecessary complications.", image: "hero" },
-  { title: "Round Trips", text: "Plan your complete journey with a dependable vehicle and driver.", image: "fleet" },
+  { title: "Family Trips", text: "Comfortable and spacious travel designed for family journeys.", image: "family" },
+  { title: "Day Trips & Excursions", text: "Explore destinations comfortably with flexible travel arrangements.", image: "excursion" },
+  { title: "One-Way Trips", text: "Convenient point-to-point travel without unnecessary complications.", image: "oneway" },
+  { title: "Round Trips", text: "Plan your complete journey with a dependable vehicle and driver.", image: "round" },
 ] as const;
 
 export const fleet = ["Sedan", "SUV", "Innova", "Innova Crysta"] as const;
