@@ -46,9 +46,11 @@ export const services = [
 export const fleet = ["Sedan", "SUV", "Innova", "Innova Crysta"] as const;
 export const destinations = ["Hyderabad", "Srisailam", "Vijayawada", "Guntur", "Rajahmundry", "Bhimavaram", "Tirupati", "Visakhapatnam", "Araku Valley", "Other destinations"] as const;
 export const reviews = [
-  "Best experience with good quality service",
-  "Your Nanda Taxi Service has made good arrangements in a very short time.",
-  "Good vehicle and experienced driver with reasonable price.",
+  "Had a wonderful Srisailam trip with Sri Nanda Travels. The driver was very good.",
+  "Our Srisailam trip was truly a beautiful and memorable experience! We booked an Ertiga from Sri Nanda Travels, and everything went smoothly…",
+  "Timely responses and a very professional approach from everyone. I truly appreciate all the team members for maintaining such good standards. Punctuality is very important for customers, especially when it comes to travel…",
+  "We booked an Ertiga from Guntur to Amalapuram with Sri Nanda Travels. The ride…",
+  "Booked 2 SUVs from Hyderabad to Narasaraopet for a wedding function. Excellent vehicles, friendly drivers & great service at a very reasonable price…",
 ] as const;
 
 export type TrustStat = { value: string; label: string; note?: string };

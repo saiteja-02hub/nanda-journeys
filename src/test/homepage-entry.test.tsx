@@ -18,7 +18,7 @@ describe("Homepage refinement safeguards", () => {
     expect(services).toHaveLength(8);
     expect(fleet).toEqual(["Sedan", "SUV", "Innova", "Innova Crysta"]);
     expect(destinations).toHaveLength(10);
-    expect(reviews).toHaveLength(3);
+    expect(reviews).toHaveLength(5);
     expect(navItems).toHaveLength(8);
     expect(navItems).toContainEqual(["About Us", "#about"]);
   });
