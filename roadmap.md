@@ -7,3 +7,4 @@
 - [x] Verify booking, contact actions, imagery, navigation, and layout.
 - [x] Add a two-second, dismissible WhatsApp quote popup without copying unconfirmed reference offers.
 - [x] Verify popup timing, dismissal, mobile fit, and enquiry handoff.
+- [x] Replace the Customer Focus stat with 28+ years of experience (since 1998) and raise the review count to 223+.
