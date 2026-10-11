@@ -15,7 +15,9 @@ export const business = {
   ],
   hours: "Open 24 hours",
   rating: "4.9",
-  reviewCount: 123,
+  reviewCount: 223,
+  experienceYears: "28+",
+  sinceYear: "1998",
   googleBusinessUrl:
     "https://www.google.com/maps/search/?api=1&query=Nanda+Tours+%26+Travels+Malkajgiri+Secunderabad",
   directionsUrl:
@@ -48,6 +50,15 @@ export const reviews = [
   "Your Nanda Taxi Service has made good arrangements in a very short time.",
   "Good vehicle and experienced driver with reasonable price.",
 ] as const;
+
+export type TrustStat = { value: string; label: string; note?: string };
+
+export const trustStats: TrustStat[] = [
+  { value: business.rating, label: "Google Rating" },
+  { value: `${business.reviewCount}+`, label: "Verified Reviews" },
+  { value: "24/7", label: "Service Availability" },
+  { value: business.experienceYears, label: "Years of Experience", note: `Since ${business.sinceYear}` },
+];
 
 export function whatsappUrl(message: string) {
   return `https://wa.me/${business.whatsappNumber}?text=${encodeURIComponent(message)}`;
