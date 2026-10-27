@@ -9,3 +9,5 @@
 - [x] Verify popup timing, dismissal, mobile fit, and enquiry handoff.
 - [x] Replace the Customer Focus stat with 28+ years of experience (since 1998) and raise the review count to 223+.
 - [x] Use the owner's Google reviews (customer text only, no owner replies) in the reviews section.
+- [ ] Add English / Telugu / Hindi switching for website text and booking labels, preserving original reviews and business details.
+- [ ] Verify language selection, booking handoff, and mobile fit.
