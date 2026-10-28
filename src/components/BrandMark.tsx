@@ -1,4 +1,7 @@
+import { useLanguage } from "@/components/LanguageProvider";
+
 export function BrandMark({ compact = false }: { compact?: boolean }) {
+  const { t } = useLanguage();
   return (
     <span className="flex min-w-0 items-center gap-3">
       <span className="grid size-10 shrink-0 place-items-center border border-gold/60" aria-hidden="true">
@@ -9,7 +12,7 @@ export function BrandMark({ compact = false }: { compact?: boolean }) {
       </span>
       <span className="min-w-0">
         <span className="block truncate font-display text-base font-semibold text-ivory">{compact ? "NANDA" : "NANDA TOURS & TRAVELS"}</span>
-        <span className="block text-[9px] uppercase tracking-[0.24em] text-gold">Journeys with distinction</span>
+        <span className="block text-[9px] uppercase tracking-[0.24em] text-gold">{t("Journeys with distinction")}</span>
       </span>
     </span>
   );
