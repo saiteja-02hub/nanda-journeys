@@ -1,4 +1,4 @@
-import { cleanup, fireEvent, render, screen } from "@testing-library/react";
+import { act, cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { LanguageProvider, useLanguage } from "@/components/LanguageProvider";
 import { isLanguage, languages, languageStorageKey, translate } from "@/config/translations";
@@ -46,9 +46,7 @@ describe("Website language selection", () => {
     vi.useFakeTimers();
     const open = vi.spyOn(window, "open").mockReturnValue(null);
     render(<LanguageProvider><QuotePopup /></LanguageProvider>);
-    vi.advanceTimersByTime(2000);
-    // Flush the timed dialog state through an explicit React event cycle.
-    fireEvent.click(document.body);
+    act(() => { vi.advanceTimersByTime(2000); });
     const form = document.querySelector("form");
     if (!form) throw new Error("Quote form did not open");
     fireEvent.change(screen.getByLabelText(translate(language, "Your name")), { target: { value: "Test customer" } });
