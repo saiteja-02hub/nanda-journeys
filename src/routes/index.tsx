@@ -15,6 +15,7 @@ import heroImage from "@/assets/nanda-hero.jpg";
 import fleetImage from "@/assets/nanda-fleet.jpg";
 import outstationImage from "@/assets/nanda-outstation.jpg";
 import cityImage from "@/assets/nanda-hyderabad.jpg";
+import sharePreviewImage from "@/assets/nanda-share-preview.jpg.asset.json";
 import ownerImage from "@/assets/nanda-owner.jpg.asset.json";
 import airportImage from "@/assets/nanda-service-airport.jpg.asset.json";
 import familyImage from "@/assets/nanda-service-family.jpg.asset.json";
@@ -22,14 +23,17 @@ import excursionImage from "@/assets/nanda-service-excursion.jpg.asset.json";
 import onewayImage from "@/assets/nanda-service-oneway.jpg.asset.json";
 import roundImage from "@/assets/nanda-service-round.jpg.asset.json";
 
-const seoTitle = "Nanda Tours & Travels | Premium Cab & Travel Services in Hyderabad";
-const seoDescription = "Nanda Tours & Travels offers reliable cab, airport transfer, Hyderabad local, corporate, family and outstation travel services from Hyderabad, Telangana.";
+const seoTitle = "Nanda Tours & Travels | Premium Travel Services";
+const seoDescription = "Premium cab and chauffeur services across Hyderabad and beyond, including airport transfers, local travel, corporate journeys, family trips and outstation travel. Reliable service and experienced drivers from Nanda Tours & Travels.";
+const shareImageUrl = `https://nanda-journeys.lovable.app${sharePreviewImage.url}`;
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: seoTitle }, { name: "description", content: seoDescription },
       { property: "og:title", content: seoTitle }, { property: "og:description", content: seoDescription },
+      { property: "og:image", content: shareImageUrl },
+      { name: "twitter:image", content: shareImageUrl },
       { property: "og:type", content: "website" }, { property: "og:url", content: "/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
