@@ -15,7 +15,7 @@ import heroImage from "@/assets/nanda-hero.jpg";
 import fleetImage from "@/assets/nanda-fleet.jpg";
 import outstationImage from "@/assets/nanda-outstation.jpg";
 import cityImage from "@/assets/nanda-hyderabad.jpg";
-import sharePreviewImage from "@/assets/nanda-social-preview.jpg.asset.json";
+import sharePreviewImage from "@/assets/nanda-social-preview.png.asset.json";
 import ownerImage from "@/assets/nanda-owner.jpg.asset.json";
 import airportImage from "@/assets/nanda-service-airport.jpg.asset.json";
 import familyImage from "@/assets/nanda-service-family.jpg.asset.json";
